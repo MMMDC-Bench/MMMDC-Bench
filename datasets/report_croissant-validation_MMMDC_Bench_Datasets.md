@@ -1,0 +1,661 @@
+# CROISSANT VALIDATION REPORT
+================================================================================
+## VALIDATION RESULTS
+--------------------------------------------------------------------------------
+Starting validation for file: MMMDC-Bench.croissant.json
+### JSON Format Validation
+✓
+The file is valid JSON.
+### Croissant Schema Validation
+✓
+The dataset passes Croissant validation.
+### Responsible AI Metadata
+✓
+All required Responsible AI metadata fields are present.
+### Records Generation Test
+✓
+No record sets found to validate.
+## JSON-LD REFERENCE
+================================================================================
+```json
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "sc": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "@base": "cr_base_iri/"
+  },
+  "@type": "sc:Dataset",
+  "name": "MMMDC_Bench_Datasets",
+  "description": "Multi-grained, multi-scenario, multi-modal document classification benchmark datasets. This dataset package contains tabular splits (train/val/test/demo/total) and a hierarchical document taxonomy file.",
+  "url": "https://github.com/MMMDC-Bench/MMMDC-Bench/tree/main/datasets",
+  "license": "https://github.com/MMMDC-Bench/MMMDC-Bench/blob/main/LICENSE",
+  "conformsTo": "http://mlcommons.org/croissant/1.1",
+  "version": "1.0.0",
+  "datePublished": "2026-05-05",
+  "citation": "Anonymous. A Multi-Scenario Multi-Modal Document Classification Benchmark with Multi-grained Hierarchical Taxonomy. NeurIPS 2026 Datasets and Benchmarks Track.",
+  "distribution": [
+    {
+      "@type": "sc:FileObject",
+      "@id": "train-csv",
+      "name": "train.csv",
+      "contentUrl": "datasets/train.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "fc6a623d4997afc039e9f3dfe7e0be153e8281e3e3fa1703253111203219fad2"
+    },
+    {
+      "@type": "sc:FileObject",
+      "@id": "val-csv",
+      "name": "val.csv",
+      "contentUrl": "datasets/val.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "aad73dd96bbcf3e7e2d78077920e9696f1035a8169da31805a163ccfd510587b"
+    },
+    {
+      "@type": "sc:FileObject",
+      "@id": "test-csv",
+      "name": "test.csv",
+      "contentUrl": "datasets/test.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "c22e1b0db19c0e928ecbe2832dd3c70d0296e5cb563fe98e6fc641eafda60161"
+    },
+    {
+      "@type": "sc:FileObject",
+      "@id": "demo-csv",
+      "name": "demo.csv",
+      "contentUrl": "datasets/demo.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "b59e2a3c32fef42ba72f29fd94239003612f5aab932c502913bdaf152f8ba034"
+    },
+    {
+      "@type": "sc:FileObject",
+      "@id": "total-csv",
+      "name": "total.csv",
+      "contentUrl": "datasets/total.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "b2ec11f7b1200f1b31c68e55351f9af723246249c39eea1b55221d08840af4e1"
+    },
+    {
+      "@type": "sc:FileObject",
+      "@id": "taxonomy-json",
+      "name": "document_taxonomy.json",
+      "contentUrl": "datasets/document_taxonomy.json",
+      "encodingFormat": "application/json",
+      "sha256": "c14fbeabb6c9114fbc6b7371b0db82f3643ef439e1acc20c81b2c976925df035"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "train-records",
+      "name": "Train split records",
+      "field": [
+        {
+          "@id": "train/image_path",
+          "name": "image_path",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "train-csv"
+            },
+            "extract": {
+              "column": "image_path"
+            }
+          }
+        },
+        {
+          "@id": "train/file_type_name",
+          "name": "file_type_name",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "train-csv"
+            },
+            "extract": {
+              "column": "file_type_name"
+            }
+          }
+        },
+        {
+          "@id": "train/file_type",
+          "name": "file_type",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "train-csv"
+            },
+            "extract": {
+              "column": "file_type"
+            }
+          }
+        },
+        {
+          "@id": "train/hash_value",
+          "name": "hash_value",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "train-csv"
+            },
+            "extract": {
+              "column": "hash_value"
+            }
+          }
+        },
+        {
+          "@id": "train/file_name",
+          "name": "file_name",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "train-csv"
+            },
+            "extract": {
+              "column": "file_name"
+            }
+          }
+        },
+        {
+          "@id": "train/file_format",
+          "name": "file_format",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "train-csv"
+            },
+            "extract": {
+              "column": "file_format"
+            }
+          }
+        },
+        {
+          "@id": "train/ocr_text",
+          "name": "ocr_text",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "train-csv"
+            },
+            "extract": {
+              "column": "ocr_text"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "val-records",
+      "name": "Validation split records",
+      "field": [
+        {
+          "@id": "val/image_path",
+          "name": "image_path",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "val-csv"
+            },
+            "extract": {
+              "column": "image_path"
+            }
+          }
+        },
+        {
+          "@id": "val/file_type_name",
+          "name": "file_type_name",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "val-csv"
+            },
+            "extract": {
+              "column": "file_type_name"
+            }
+          }
+        },
+        {
+          "@id": "val/file_type",
+          "name": "file_type",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "val-csv"
+            },
+            "extract": {
+              "column": "file_type"
+            }
+          }
+        },
+        {
+          "@id": "val/hash_value",
+          "name": "hash_value",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "val-csv"
+            },
+            "extract": {
+              "column": "hash_value"
+            }
+          }
+        },
+        {
+          "@id": "val/file_name",
+          "name": "file_name",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "val-csv"
+            },
+            "extract": {
+              "column": "file_name"
+            }
+          }
+        },
+        {
+          "@id": "val/file_format",
+          "name": "file_format",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "val-csv"
+            },
+            "extract": {
+              "column": "file_format"
+            }
+          }
+        },
+        {
+          "@id": "val/ocr_text",
+          "name": "ocr_text",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "val-csv"
+            },
+            "extract": {
+              "column": "ocr_text"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "test-records",
+      "name": "Test split records",
+      "field": [
+        {
+          "@id": "test/image_path",
+          "name": "image_path",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test-csv"
+            },
+            "extract": {
+              "column": "image_path"
+            }
+          }
+        },
+        {
+          "@id": "test/file_type_name",
+          "name": "file_type_name",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test-csv"
+            },
+            "extract": {
+              "column": "file_type_name"
+            }
+          }
+        },
+        {
+          "@id": "test/file_type",
+          "name": "file_type",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test-csv"
+            },
+            "extract": {
+              "column": "file_type"
+            }
+          }
+        },
+        {
+          "@id": "test/hash_value",
+          "name": "hash_value",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test-csv"
+            },
+            "extract": {
+              "column": "hash_value"
+            }
+          }
+        },
+        {
+          "@id": "test/file_name",
+          "name": "file_name",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test-csv"
+            },
+            "extract": {
+              "column": "file_name"
+            }
+          }
+        },
+        {
+          "@id": "test/file_format",
+          "name": "file_format",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test-csv"
+            },
+            "extract": {
+              "column": "file_format"
+            }
+          }
+        },
+        {
+          "@id": "test/ocr_text",
+          "name": "ocr_text",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test-csv"
+            },
+            "extract": {
+              "column": "ocr_text"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "demo-records",
+      "name": "Demo split records",
+      "field": [
+        {
+          "@id": "demo/scene_code",
+          "name": "scene_code",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "demo-csv"
+            },
+            "extract": {
+              "column": "scene_code"
+            }
+          }
+        },
+        {
+          "@id": "demo/file_url",
+          "name": "file_url",
+          "dataType": "sc:URL",
+          "source": {
+            "fileObject": {
+              "@id": "demo-csv"
+            },
+            "extract": {
+              "column": "file_url"
+            }
+          }
+        },
+        {
+          "@id": "demo/file_type_name",
+          "name": "file_type_name",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "demo-csv"
+            },
+            "extract": {
+              "column": "file_type_name"
+            }
+          }
+        },
+        {
+          "@id": "demo/file_type",
+          "name": "file_type",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "demo-csv"
+            },
+            "extract": {
+              "column": "file_type"
+            }
+          }
+        },
+        {
+          "@id": "demo/hash_value",
+          "name": "hash_value",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "demo-csv"
+            },
+            "extract": {
+              "column": "hash_value"
+            }
+          }
+        },
+        {
+          "@id": "demo/file_name",
+          "name": "file_name",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "demo-csv"
+            },
+            "extract": {
+              "column": "file_name"
+            }
+          }
+        },
+        {
+          "@id": "demo/file_format",
+          "name": "file_format",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "demo-csv"
+            },
+            "extract": {
+              "column": "file_format"
+            }
+          }
+        },
+        {
+          "@id": "demo/ocr_text",
+          "name": "ocr_text",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "demo-csv"
+            },
+            "extract": {
+              "column": "ocr_text"
+            }
+          }
+        },
+        {
+          "@id": "demo/first_image_url",
+          "name": "first_image_url",
+          "dataType": "sc:URL",
+          "source": {
+            "fileObject": {
+              "@id": "demo-csv"
+            },
+            "extract": {
+              "column": "first_image_url"
+            }
+          }
+        },
+        {
+          "@id": "demo/image_url_list",
+          "name": "image_url_list",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "demo-csv"
+            },
+            "extract": {
+              "column": "image_url_list"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "total-records",
+      "name": "Total split records",
+      "field": [
+        {
+          "@id": "total/image_path",
+          "name": "image_path",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "total-csv"
+            },
+            "extract": {
+              "column": "image_path"
+            }
+          }
+        },
+        {
+          "@id": "total/file_type_name",
+          "name": "file_type_name",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "total-csv"
+            },
+            "extract": {
+              "column": "file_type_name"
+            }
+          }
+        },
+        {
+          "@id": "total/file_type",
+          "name": "file_type",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "total-csv"
+            },
+            "extract": {
+              "column": "file_type"
+            }
+          }
+        },
+        {
+          "@id": "total/hash_value",
+          "name": "hash_value",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "total-csv"
+            },
+            "extract": {
+              "column": "hash_value"
+            }
+          }
+        },
+        {
+          "@id": "total/file_name",
+          "name": "file_name",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "total-csv"
+            },
+            "extract": {
+              "column": "file_name"
+            }
+          }
+        },
+        {
+          "@id": "total/file_format",
+          "name": "file_format",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "total-csv"
+            },
+            "extract": {
+              "column": "file_format"
+            }
+          }
+        },
+        {
+          "@id": "total/ocr_text",
+          "name": "ocr_text",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "total-csv"
+            },
+            "extract": {
+              "column": "ocr_text"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "taxonomy-records",
+      "name": "Document taxonomy entries",
+      "description": "Hierarchical document taxonomy metadata. Each entry contains label code, parent relation, and multilingual label descriptions.",
+      "field": [
+        {
+          "@id": "taxonomy/entry",
+          "name": "taxonomy_entry",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "taxonomy-json"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "rai:dataLimitations": "This benchmark focuses on document classification and OCR-rich business-like document scenarios. It may not transfer to domains with radically different document styles, languages, layouts, or annotation taxonomies. The dataset should not be used as the sole basis for high-stakes automated decisions.",
+  "rai:dataBiases": "Potential biases include scenario sampling bias, document-type frequency imbalance, OCR noise patterns, and style skew from synthetic or templated generation pipelines. Model performance may differ across document domains, layouts, and language/register variants.",
+  "rai:personalSensitiveInformation": "The dataset contains document text and may include personal or sensitive entities present in source/synthetic content (e.g., names, contact details, IDs, addresses, financial and transaction-related information). Users should conduct downstream privacy and compliance reviews before deployment.",
+  "rai:dataUseCases": "Validated for research on multi-modal document classification, benchmark evaluation, taxonomy-aware classification, and model robustness analysis under hierarchical labels. Not validated for identity verification, legal adjudication, credit/risk decisions, medical diagnosis, or fully automated operational decision-making.",
+  "rai:dataSocialImpact": "Potential positive impact includes improved document AI benchmarking and reproducible research. Potential negative impact includes privacy leakage, unfair performance disparities, and misuse in high-stakes automation. Recommended mitigations include privacy-preserving handling, subgroup evaluation, human oversight, and domain-specific risk assessment.",
+  "rai:hasSyntheticData": true,
+  "prov:wasDerivedFrom": [
+    "https://github.com/MMMDC-Bench/MMMDC-Bench"
+  ],
+  "prov:wasGeneratedBy": [
+    {
+      "@type": "prov:Activity",
+      "name": "Document collection and preprocessing",
+      "description": "Document samples were processed into tabular benchmark splits, with OCR text and file metadata fields exported into CSV files."
+    },
+    {
+      "@type": "prov:Activity",
+      "name": "Taxonomy construction and annotation",
+      "description": "A hierarchical taxonomy (document_taxonomy.json) was used to organize label codes, label names, and parent-child relations for classification tasks."
+    }
+  ]
+}
+```
