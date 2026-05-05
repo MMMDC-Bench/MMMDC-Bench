@@ -4,7 +4,7 @@
 
 <div align="center">
 
-[![arXiv](https://img.shields.io/badge/arXiv-2602.07038-orange)]()
+[![arXiv](https://img.shields.io/badge/xxx.xxxxx)]()
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/MMMDC-Bench/MMMDC-Bench)
 
 </div>
